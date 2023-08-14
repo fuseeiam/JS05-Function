@@ -7,8 +7,8 @@ function sendTo(from, to) {
     console.log(`From ${from} to ${to}`);
 }
 
-sendTo(sender, 'Sarah'); // *
-sendTo(null); // **
+sendTo(sender, 'Sarah'); // * From Matt to Sarah
+sendTo(null); // ** undefined เพราะ null คือค่าว่าง หรือค่าที่ไม่รู้ ผลจึงไม่ทราบค่านั้น
 ```
 
 ```js
@@ -18,6 +18,6 @@ function sendTo(to, from = 'CC') {
     console.log(`From ${from} to ${to}`);
 }
 
-sendTo('Max'); // ***
-sendTo('Ben', 'Jay'); // ****
+sendTo('Max'); // *** From CC to Max
+sendTo('Ben', 'Jay'); // **** From Jey to Ben
 ```
